@@ -13,7 +13,7 @@ interface CartProps{
     cover: string,
     amount: number,
     total: number
-}
+}aaaaaaa
 
 export const CartContext = createContext({} as CartContextData)
 
