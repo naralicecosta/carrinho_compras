@@ -13,12 +13,14 @@ interface CartProps{
     cover: string,
     amount: number,
     total: number
-}aaaaaaaaa
-
+}
+interface  CartProviderProps{
+    children: ReactNode;
+}
 export const CartContext = createContext({} as CartContextData)
 
 function CartProvider({children}: CartProviderProps){
-    const [cart, setCart] = useState<CartProps[]>([]) //lista/array vazio porque começa vazio
+    const [cart, setCart] = useState<CartProps[]>([]) //lista/array vazio porque começa vazios
     return(
         <CartContext.Provider 
         value={{
