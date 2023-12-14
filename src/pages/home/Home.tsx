@@ -34,7 +34,7 @@ export function Home(){
 
                         <div className='flex gap-3 items-center'>
                             <strong className='text-zinc-700/90'>
-                                {product.price.toLocaleString("pt-BR",{
+                                {product.price.toLocaleString("pt-BR", {
                                     style: "currency",
                                     currency: "BRL"
                                 })}
