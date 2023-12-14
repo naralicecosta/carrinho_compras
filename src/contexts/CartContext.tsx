@@ -14,9 +14,7 @@ interface CartProps{
     amount: number,
     total: number
 }
-interface  CartProviderProps{
-    children: ReactNode;
-}
+
 export const CartContext = createContext({} as CartContextData)
 
 function CartProvider({children}: CartProviderProps){
