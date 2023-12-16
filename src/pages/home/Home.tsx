@@ -2,7 +2,8 @@ import {BsCartPlus} from 'react-icons/bs'
 import { useEffect, useState, useContext } from 'react'
 import { api } from '../../services/api' 
 import { CartContext } from '../../contexts/CartContext'
-import toast, { Toast } from 'react-hot-toast'
+import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 
 
 export interface ProductProps{
@@ -46,8 +47,17 @@ export function Home(){
                     
                     { products.map((product) => ( //map para percorrer a lista
                         <section key={product.id} className="w-full">
-                        <img className="w-full rounded-lg max-h-70 mb-2" src={product.cover} alt={product.title}/>
-                        <p className='font-medium mt-1 mb-2'>{product.title}</p>
+                            <Link to={`/product/${product.id}`}>
+                                <img
+                                 className="w-full rounded-lg max-h-70 mb-2"
+                                  src={product.cover}
+                                   alt={product.title}
+                                />
+                                <p
+                                 className='font-medium mt-1 mb-2'>
+                                    {product.title}
+                                </p>
+                            </Link>
 
                         <div className='flex gap-3 items-center'>
                             <strong className='text-zinc-700/90'>
